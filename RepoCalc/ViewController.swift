@@ -62,6 +62,25 @@ class ViewController: UIViewController {
         showTappedValueInDisplay(tappedValue: tappedValue)
     }
     
+    @IBAction func buttonDecimalPoint(_ sender: Any) {
+    }
+    
+    @IBAction func buttonEqual(_ sender: Any) {
+    }
+    
+    @IBAction func buttonPlus(_ sender: Any) {
+    }
+    
+    @IBAction func buttonMinus(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
