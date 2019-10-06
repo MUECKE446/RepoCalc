@@ -71,6 +71,7 @@ class ViewController: UIViewController {
         calculatorDisplay.text! += String(tappedValue)
     }
     
+    // während der Bearbeitung von Feature_2 habe ich in master diese Änderung hinzugefügt und committed
     
     
 }
