@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var strCurrent = ""
+    var strLast = ""
+    
+    
     @IBOutlet weak var calculatorDisplay: UILabel!
     
     @IBAction func button0(_ sender: Any) {
@@ -62,9 +66,53 @@ class ViewController: UIViewController {
         showTappedValueInDisplay(tappedValue: tappedValue)
     }
     
+    @IBAction func buttonDecimalPoint(_ sender: Any) {
+        let tappedValue = "."
+        if let tmpVal = calculatorDisplay.text {
+            if tmpVal.contains(".") {
+                return
+            }
+            showTappedValueInDisplay(tappedValue: tappedValue)
+        }
+        else {
+                return
+        }
+    }
+    
+    @IBAction func buttonEqual(_ sender: Any) {
+    }
+    
+    @IBAction func buttonPlus(_ sender: Any) {
+        if let tmpVal = calculatorDisplay.text {
+            strCurrent = tmpVal
+        }
+        else {
+            return
+        }
+        if strLast.isEmpty {
+            strLast = strCurrent
+        }
+        else {
+            // addiere strLast und strCurrent
+            
+        }
+    }
+    
+    @IBAction func buttonMinus(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // nach Start alle Register löschen
+        strCurrent = "" ; strLast = ""
     }
 
     func showTappedValueInDisplay(tappedValue : String) {
