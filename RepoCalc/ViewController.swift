@@ -74,12 +74,28 @@ class ViewController: UIViewController {
             }
             showTappedValueInDisplay(tappedValue: tappedValue)
         }
+        else {
+                return
+        }
     }
     
     @IBAction func buttonEqual(_ sender: Any) {
     }
     
     @IBAction func buttonPlus(_ sender: Any) {
+        if let tmpVal = calculatorDisplay.text {
+            strCurrent = tmpVal
+        }
+        else {
+            return
+        }
+        if strLast.isEmpty {
+            strLast = strCurrent
+        }
+        else {
+            // addiere strLast und strCurrent
+            
+        }
     }
     
     @IBAction func buttonMinus(_ sender: Any) {
